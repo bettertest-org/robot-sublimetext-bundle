@@ -1,0 +1,46 @@
+{
+    "fileTypes": [
+        "txt"
+    ], 
+    "name": "Robot Txt", 
+    "patterns": [
+    	
+        {
+        	"comment" : "locators for Selenium eg. xpath=, css=",
+        	"match" : "(\\s{2,})(xpath=|css=|identifier=|id=|name=|dom=|link=|tag=|//)(.+?)(\\s{2}|\\n)",
+        	"name" : "string.robot",
+            "captures": {
+                "2": { "name": "storage.robot" }
+            }
+        },
+        {
+            "comment" : "blocks of code, eg. Keywords, Settings", 
+            "match" : "(^\\*\\*\\*.*?\\*\\*\\*)|((?<=^\\|)\\s+\\*\\*\\*.*?\\*\\*\\*)", 
+            "name" : "constant.language.robot"
+        },
+        {
+        	"comment" : "square brackets eg. [Arguments], [Tags]",
+        	"match" : "(\\s)\\[.*?\\]",
+       		"name" : "storage.type.method.robot"
+        }, 
+        {
+        	"comment" : "variables eg. ${some_val}, ${12.23}",
+        	"match" : "(\\$\\{.*?\\})|(@\\{.*?\\})",
+        	"name" : "variable.language.robot"
+        },
+        {
+        	"comment" : "inline comments",
+        	"begin": "(\\s)(?<!\\\\)#",
+        	"end" : "$",
+        	"name" : "comment.robot"
+        },
+        {
+        	"comment" : "Test Case headers",
+        	"begin" : "(^[^ \\t\\*\\n\\|]+)|((?<=^\\|)\\s+[^ \\t\\*\\n\\|]+)",
+        	"end" : "\\s{2}|\\t|$|\\s+(?=\\|)",
+        	"name" : "keyword.control.robot"
+        }
+    ], 
+    "scopeName": "text.robot_txt", 
+    "uuid": "c2d3d999-ca87-4018-abdf-83fbcb9abf5b"
+}
