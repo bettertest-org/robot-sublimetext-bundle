@@ -1,6 +1,0 @@
-##  bettertest.org
-
-### Robot Framework bundle for Sublime Text editor
-#### Syntax highliting for .txt files 
-
-To turn on Robot bundle it is necessery to put the folder into Sublime Text packages directory (Preferences -> Browse Packages). It is C:\Users\[your user name]\AppData\Roaming\Sublime Text 2\Packages on Windows 7. Additionaly set Robot syntax highligting as default for txt files - View -> Syntax -> Open all with current extension as -> Robot txt
